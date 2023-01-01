@@ -1,5 +1,5 @@
 import './index.css';
-
+import '@fontsource/abeezee';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
