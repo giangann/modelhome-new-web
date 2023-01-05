@@ -6,6 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+
 import { centerDiv, WhiteTypoStyled } from '../../styles';
 
 export const ImageLibrary = () => {

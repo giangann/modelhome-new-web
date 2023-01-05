@@ -19,7 +19,7 @@ export const Home = () => {
       />
       <About />
       <Project />
-      <ImageLibrary/>
+      <ImageLibrary />
     </Box>
   );
 };

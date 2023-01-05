@@ -9,8 +9,14 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+
 import { white } from '../libs';
-import { centerDiv, centerHorizontalDiv, responsiveText, WhiteTypoStyled } from '../styles';
+import {
+  centerDiv,
+  centerHorizontalDiv,
+  responsiveText,
+  WhiteTypoStyled,
+} from '../styles';
 import {
   IconParkTiktok,
   IcRoundPhoneInTalk,
