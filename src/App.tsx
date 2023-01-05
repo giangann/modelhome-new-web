@@ -5,9 +5,10 @@ import {
   createTheme,
   responsiveFontSizes,
   ThemeProvider,
-  Typography
+  Typography,
 } from '@mui/material';
 import { useState } from 'react';
+import { Router } from './routers';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,10 +34,11 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box>
+      <Router />
+      {/* <Box>
         <Typography variant="h2">Test font</Typography>
         <Typography>Test font</Typography>
-      </Box>
+      </Box> */}
     </ThemeProvider>
   );
 }
