@@ -1,0 +1,48 @@
+.alice-carousel__prev-btn {
+  /* display: none !important; */
+  position: absolute;
+  top: 40%;
+  left: -42px;
+  height: unset;
+  text-align: left !important;
+}
+.alice-carousel__next-btn {
+  /* display: none !important; */
+  position: absolute;
+  top: 40%;
+  right: -36px;
+  height: unset;
+  text-align: right;
+}
+.alice-carousel__prev-btn-item {
+  font-size: 40px !important;
+  color: white !important;
+}
+
+.alice-carousel__next-btn-item {
+  font-size: 40px !important;
+  color: white !important;
+}
+
+.alice-carousel__dots{
+  margin-top: 0;
+}
+/*  */
+.alice-carousel__wrapper li {
+  width: fit-content !important;
+  padding: 10px !important    ;
+}
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  padding: 0px !important;
+}
+
+/*  */
+@media screen and (max-width: 600px) {
+  .alice-carousel__prev-btn {
+    left: -28px;
+  }
+  .alice-carousel__next-btn {
+    right: -28px;
+  }
+}

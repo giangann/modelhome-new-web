@@ -3,15 +3,18 @@ import {
   Box,
   Grid,
   Hidden,
+  IconButton,
   MenuItem,
   Stack,
   styled,
   Typography,
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 import LogoImage from '../assets/images/logo_modelhome.jpg';
 import { IcSharpSearch, IcTwotoneMenuOpen } from './icons/Icons';
 export const Header = () => {
+  const navigate = useNavigate();
   const headerItems = [
     {
       name: 'Về chúng tôi',
@@ -19,7 +22,7 @@ export const Header = () => {
     },
     {
       name: 'Các dự án',
-      link: '#',
+      link: '/products',
     },
     {
       name: 'Kiến trúc',
@@ -41,6 +44,7 @@ export const Header = () => {
 
   const handleClickHeaderItems = (to: string) => {
     console.log('navigate to: ', to);
+    navigate(to);
   };
   return (
     <AppBar
@@ -55,17 +59,19 @@ export const Header = () => {
       <Hidden smDown>
         <Grid container>
           <Grid item xs={3}>
-            <img
-              style={{
-                position: 'absolute',
-                bottom: '-115px',
-                left: '160px',
-                width: 150,
-                height: 'auto',
-              }}
-              alt="logo"
-              src={LogoImage}
-            />
+            <IconButton onClick={() => navigate('/')}>
+              <img
+                style={{
+                  position: 'absolute',
+                  bottom: '-115px',
+                  left: '160px',
+                  width: 150,
+                  height: 'auto',
+                }}
+                alt="logo"
+                src={LogoImage}
+              />
+            </IconButton>
           </Grid>
           <Grid item xs={8}>
             <Stack direction="row" justifyContent="space-around">

@@ -91,15 +91,15 @@ export const Footer = () => {
                 </WhiteTypoStyled>
               </Stack>
             </Stack>
-            <Stack direction="row" justifyContent="flex-start">
+            <Stack direction="row" justifyContent="flex-start" sx={{ ml: '-8px' }}>
               <IconButton>
-                <IconParkTiktok fontSize={24} />
+                <IconParkTiktok fontSize={22} />
               </IconButton>
               <IconButton>
                 <PhFacebookLogoDuotone fontSize={24} color="wheat" />
               </IconButton>
               <IconButton>
-                <OpenmojiYoutube fontSize={24} />
+                <OpenmojiYoutube fontSize={30} />
               </IconButton>
             </Stack>
           </Box>
