@@ -1,10 +1,12 @@
+import 'react-alice-carousel/lib/alice-carousel.css';
+import './carousel.css';
+
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { Container } from '@mui/system';
 import AliceCarousel from 'react-alice-carousel';
+
 import { centerDiv, WhiteTypoStyled } from '../../styles';
 import { CarouselItem } from './CarouselItem';
-import 'react-alice-carousel/lib/alice-carousel.css';
-import './carousel.css';
 
 export const ListProject = () => {
   const theme = useTheme();

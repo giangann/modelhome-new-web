@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+
 import { centerDiv } from '../../styles';
 
 type CarouselItemProps = {
