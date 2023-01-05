@@ -8,6 +8,7 @@ import {
   styled,
   Typography,
 } from '@mui/material';
+
 import LogoImage from '../assets/images/logo_modelhome.jpg';
 import { IcSharpSearch, IcTwotoneMenuOpen } from './icons/Icons';
 export const Header = () => {
@@ -62,13 +63,14 @@ export const Header = () => {
                 width: 150,
                 height: 'auto',
               }}
+              alt="logo"
               src={LogoImage}
             />
           </Grid>
           <Grid item xs={8}>
             <Stack direction="row" justifyContent="space-around">
               {headerItems.map((item, index) => (
-                <MenuItem onClick={() => handleClickHeaderItems(item.link)}>
+                <MenuItem key={index} onClick={() => handleClickHeaderItems(item.link)}>
                   <Typography>{item.name}</Typography>
                 </MenuItem>
               ))}
@@ -94,6 +96,7 @@ export const Header = () => {
                   width: 40,
                   height: 'auto',
                 }}
+                alt="logo"
                 src={LogoImage}
               />
             </Box>

@@ -1,4 +1,5 @@
 import { Box, Grid } from '@mui/material';
+
 import { black } from '../../libs';
 import { importAll } from '../../libs/functions';
 import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
@@ -18,7 +19,7 @@ export const Project = () => {
     'Nhà anh Chính - Long Biên',
     'Chị Thủy Bea Sky - Hoàng Mai',
   ];
-  let arrImage = [];
+  const arrImage = [];
   for (let i = 0; i < 9; i++) {
     arrImage.push(`${prefixPath}project_${i + 1}.jpg`);
   }
@@ -32,7 +33,7 @@ export const Project = () => {
       </WhiteTypoStyled>
       <Grid container spacing={{ xs: 2, sm: 4 }} mt={4} p={{ xs: 2, sm: 4 }}>
         {arrImage.map((item: any, index: any) => (
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4} key={index}>
             <Box
               sx={{
                 position: 'relative',
@@ -43,6 +44,7 @@ export const Project = () => {
             >
               <img
                 src={item}
+                alt={`project ${index + 1}`}
                 style={{
                   width: '100%',
                   height: '100%',

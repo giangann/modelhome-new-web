@@ -1,7 +1,8 @@
 import { Box, Container, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+
+import AboutImage from '../../assets/images/about_image.jpg';
 import { backgroundColor } from '../../libs/colors';
 import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
-import AboutImage from '../../assets/images/about_image.jpg';
 
 export const About = () => {
   const about = {
@@ -32,6 +33,7 @@ export const About = () => {
         <Grid item xs={12} sm={6} sx={{ ...centerDiv }}>
           <img
             src={AboutImage}
+            alt="about"
             style={{
               width: isMobile ? '100%' : '50%',
               height: isMobile ? 'auto' : 240,

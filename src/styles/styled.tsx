@@ -11,9 +11,6 @@ export const WhiteTypoStyled = styled(Typography)({
   color: 'white',
 });
 
-
-
-
 // styles css propertises
 export const whiteTypo = {
   color: 'white',
