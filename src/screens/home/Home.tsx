@@ -4,6 +4,7 @@ import ImageSlide02 from '../../assets/images/slide_02.jpg';
 import { backgroundColor } from '../../libs/colors';
 import ImageSlide01 from '../assets/images/slide_01.jpg';
 import { About } from './About';
+import { ImageLibrary } from './ImageLibrary';
 import { Project } from './Project';
 
 export const Home = () => {
@@ -18,6 +19,7 @@ export const Home = () => {
       />
       <About />
       <Project />
+      <ImageLibrary/>
     </Box>
   );
 };

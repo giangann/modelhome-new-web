@@ -1,7 +1,6 @@
 import { Box, Grid } from '@mui/material';
 
 import { black } from '../../libs';
-import { importAll } from '../../libs/functions';
 import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
 
 // const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));

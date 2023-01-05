@@ -28,3 +28,8 @@ export const centerDiv = {
   alignItems: 'center',
   justifyContent: 'center',
 };
+
+export const centerHorizontalDiv = {
+  display: 'flex',
+  justifyContent: 'center',
+};
