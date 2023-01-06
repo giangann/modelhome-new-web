@@ -1,4 +1,5 @@
 import { Box, Grid } from '@mui/material';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 import { black } from '../../libs';
 import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
@@ -6,6 +7,7 @@ import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
 // const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
 export const Project = () => {
+  const navigate = useNavigate();
   const prefixPath = '/src/assets/images/';
   const imageTitle = [
     'Nội thất căn hộ The Park Home',
@@ -23,8 +25,6 @@ export const Project = () => {
     arrImage.push(`${prefixPath}project_${i + 1}.jpg`);
   }
 
-  console.log('arrImage', arrImage);
-
   return (
     <Box sx={{ mt: 6 }}>
       <WhiteTypoStyled variant="h3" sx={{ width: '100%', textAlign: 'center' }}>
@@ -34,6 +34,8 @@ export const Project = () => {
         {arrImage.map((item: any, index: any) => (
           <Grid item xs={12} sm={4} key={index}>
             <Box
+              component="div"
+              onClick={() => navigate(`/projects/${index}`)}
               sx={{
                 position: 'relative',
                 width: '100%',
