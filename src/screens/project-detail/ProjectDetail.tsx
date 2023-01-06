@@ -41,6 +41,7 @@ export const ProjectDetail = () => {
           {arrImage.map((item: any, index: any) => (
             <ImageListItem key={index}>
               <div
+                //some addtional props to avoid eslint complain
                 role="button"
                 tabIndex={index}
                 onKeyDown={() => openFullscreen(parseInt(index))}

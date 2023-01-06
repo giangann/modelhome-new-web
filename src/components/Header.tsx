@@ -9,38 +9,21 @@ import {
   styled,
   Typography,
 } from '@mui/material';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import LogoImage from '../assets/images/logo_modelhome.jpg';
+import { HEADER_ITEMS } from '../libs';
+import { CustomDrawer } from './CustomDrawer';
 import { IcSharpSearch, IcTwotoneMenuOpen } from './icons/Icons';
+import { ListInsideDrawer } from './ListInsideDrawer';
 export const Header = () => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const onClose = () => {
+    setOpenDrawer(false);
+  };
   const navigate = useNavigate();
-  const headerItems = [
-    {
-      name: 'Về chúng tôi',
-      link: '#',
-    },
-    {
-      name: 'Các dự án',
-      link: '/products',
-    },
-    {
-      name: 'Kiến trúc',
-      link: '#',
-    },
-    {
-      name: 'Nội thất',
-      link: '#',
-    },
-    {
-      name: 'Tin tức',
-      link: '#',
-    },
-    {
-      name: 'Liên hệ',
-      link: '#',
-    },
-  ];
 
   const handleClickHeaderItems = (to: string) => {
     console.log('navigate to: ', to);
@@ -75,7 +58,7 @@ export const Header = () => {
           </Grid>
           <Grid item xs={8}>
             <Stack direction="row" justifyContent="space-around">
-              {headerItems.map((item, index) => (
+              {HEADER_ITEMS.map((item, index) => (
                 <MenuItem key={index} onClick={() => handleClickHeaderItems(item.link)}>
                   <Typography>{item.name}</Typography>
                 </MenuItem>
@@ -90,11 +73,14 @@ export const Header = () => {
         <Grid container sx={{ position: 'relative' }}>
           <Grid item xs={12}>
             <Box
+              component="div"
+              onClick={() => navigate('/')}
               sx={{
                 width: '100%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                cursor: 'pointer',
               }}
             >
               <img
@@ -121,9 +107,13 @@ export const Header = () => {
             <CustomMenuItem>
               <IcSharpSearch fontSize={24} />
             </CustomMenuItem>
-            <CustomMenuItem>
+            <CustomMenuItem onClick={() => setOpenDrawer(true)}>
               <IcTwotoneMenuOpen fontSize={24} />
             </CustomMenuItem>
+            <CustomDrawer open={openDrawer} onClose={onClose} anchor="right">
+              {/* <Box sx={{ backgroundColor: 'pink', width: 200, height: 6000 }} /> */}
+              <ListInsideDrawer onClose={onClose} />
+            </CustomDrawer>
           </Box>
         </Grid>
       </Hidden>
