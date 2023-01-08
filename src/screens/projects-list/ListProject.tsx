@@ -5,6 +5,7 @@ import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { Container } from '@mui/system';
 import AliceCarousel from 'react-alice-carousel';
 
+import { LIST_PROJECT } from '../../libs';
 import { centerDiv, WhiteTypoStyled } from '../../styles';
 import { CarouselItem } from './CarouselItem';
 
@@ -21,12 +22,20 @@ export const ListProject = () => {
   const officeDesign = arrImage.slice(arrImage.length / 2, arrImage.length - 1);
 
   console.log('house furniture', houseFurniture);
-  const houseFurnitureCarousel = houseFurniture.map((item: any, index: any) => (
-    <CarouselItem imageLink={item} key={index} />
+  // const houseFurnitureCarousel = houseFurniture.map((item: any, index: any) => (
+  //   <CarouselItem imageLink={item} key={index} />
+  // ));
+
+  // const officeDesignCarousel = officeDesign.map((item: any, index: any) => (
+  //   <CarouselItem imageLink={item} key={index} />
+  // ));
+
+  const houseFurnitureCarousel = LIST_PROJECT.map((item: any, index: any) => (
+    <CarouselItem imageLink={item.thumbnail} key={index} id={item.id} />
   ));
 
-  const officeDesignCarousel = officeDesign.map((item: any, index: any) => (
-    <CarouselItem imageLink={item} key={index} />
+  const officeDesignCarousel = LIST_PROJECT.map((item: any, index: any) => (
+    <CarouselItem imageLink={item.thumbnail} key={index} id={item.id} />
   ));
 
   const carouselBreakpoints = {

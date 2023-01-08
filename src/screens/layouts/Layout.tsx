@@ -6,7 +6,7 @@ import { backgroundColor } from '../../libs';
 
 export const Layout = () => {
   return (
-    <Box sx={{ backgroundColor: '#7E4528', pb: 12 }}>
+    <Box sx={{ backgroundColor: backgroundColor['main'], pb: 12 }}>
       <Header />
       <Outlet />
       <Footer />

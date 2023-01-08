@@ -9,13 +9,19 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import { useParams } from 'react-router-dom';
 
+import { LIST_PROJECT } from '../../libs';
 import { centerDiv, WhiteTypoStyled } from '../../styles';
+import { ProjectInformation } from './ProjectInformation';
 
 type ProjectDetailProps = {
   name: string;
 };
 export const ProjectDetail = () => {
+  const params = useParams();
+  const project = LIST_PROJECT[parseInt(params?.id || '') - 1];
+
   const prefixPath = '/src/assets/images/';
   const arrImage = [];
   for (let i = 0; i < 9; i++) {
@@ -35,6 +41,9 @@ export const ProjectDetail = () => {
         <WhiteTypoStyled variant="h4" sx={{ fontWeight: 600 }}>
           Chi tiết dự án{' '}
         </WhiteTypoStyled>
+      </Box>
+      <Box>
+        <ProjectInformation project={project} />
       </Box>
       <Box>
         <ImageList variant="masonry" cols={isMobile ? 2 : 3} gap={8}>
