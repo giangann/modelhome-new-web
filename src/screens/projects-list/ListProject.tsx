@@ -31,11 +31,21 @@ export const ListProject = () => {
   // ));
 
   const houseFurnitureCarousel = LIST_PROJECT.map((item: any, index: any) => (
-    <CarouselItem imageLink={item.thumbnail} key={index} id={item.id} />
+    <CarouselItem
+      projectName={item.name}
+      imageLink={item.thumbnail}
+      key={index}
+      id={item.id}
+    />
   ));
 
   const officeDesignCarousel = LIST_PROJECT.map((item: any, index: any) => (
-    <CarouselItem imageLink={item.thumbnail} key={index} id={item.id} />
+    <CarouselItem
+      projectName={item.name}
+      imageLink={item.thumbnail}
+      key={index}
+      id={item.id}
+    />
   ));
 
   const carouselBreakpoints = {
@@ -87,6 +97,8 @@ export const ListProject = () => {
           />
         </Box>
       </Box>
+
+      {/* <Bo */}
     </Container>
   );
 };

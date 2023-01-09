@@ -71,7 +71,7 @@ export const PostItem = (props: PostItemProps) => {
         <>
           <Typography>{short_content}</Typography>
           <Button sx={{ mt: 2 }} variant="contained">
-            <Typography>Chi tiet</Typography>
+            <Typography>Chi tiết</Typography>
           </Button>
         </>
       ) : undefined}

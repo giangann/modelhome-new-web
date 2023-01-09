@@ -42,12 +42,12 @@ export const Header = () => {
       <Hidden smDown>
         <Grid container>
           <Grid item xs={3}>
-            <IconButton onClick={() => navigate('/')}>
+            <IconButton
+              sx={{ position: 'absolute', bottom: '-115px', left: '160px', p: 0 }}
+              onClick={() => navigate('/')}
+            >
               <img
                 style={{
-                  position: 'absolute',
-                  bottom: '-115px',
-                  left: '160px',
                   width: 150,
                   height: 'auto',
                 }}

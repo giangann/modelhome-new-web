@@ -119,6 +119,7 @@ export const Footer = () => {
                 fullWidth
                 sx={{
                   backgroundColor: white['120'],
+                  borderRadius: '4px',
                   '& input': {
                     paddingTop: '12px',
                   },
@@ -132,6 +133,7 @@ export const Footer = () => {
                 fullWidth
                 sx={{
                   backgroundColor: white['120'],
+                  borderRadius: '4px',
                   '& .css-qmzfsv-MuiInputBase-root-MuiFilledInput-root': {
                     paddingTop: '12px',
                   },

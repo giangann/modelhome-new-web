@@ -1,8 +1,20 @@
 export const companyName = 'Modelhome';
 
 export const generateImage = (width: number, height: number) => {
-  const resultPicksumURL = `https://picsum.photos/seed/picsum/${width}/${height}`;
+  const randId = Math.floor(Math.random() * 900) + 10;
+  const resultPicksumURL = `https://picsum.photos/id/${randId}/${width}/${height}`;
   return resultPicksumURL;
+};
+
+export const generateRandomSizeImage = () => {
+  const randId = Math.floor(Math.random() * 900) + 10;
+
+  const randWidth = Math.floor(Math.random() * 200) + 200;
+  const randHeight = Math.floor(Math.random() * 200) + 200;
+
+  const basePicsumUrl = 'https://picsum.photos/id/';
+
+  return `${basePicsumUrl}/${randId}/${randWidth}/${randHeight}`;
 };
 
 export const getImageArrayFromAssets = (length: number) => {
@@ -15,6 +27,18 @@ export const getImageArrayFromAssets = (length: number) => {
 
   return arrImage;
 };
+
+export const generateRandomArrayImage = (length: number) => {
+  // const randId =
+  const arrImage = [];
+  for (let i = 0; i < length; i++) {
+    arrImage.push(generateRandomSizeImage());
+  }
+
+  return arrImage;
+};
+
+export const ALL_IMAGE = generateRandomArrayImage(50);
 export const HEADER_ITEMS = [
   {
     name: 'Về chúng tôi',
@@ -33,12 +57,16 @@ export const HEADER_ITEMS = [
     link: '#',
   },
   {
+    name: 'Thư viện ảnh',
+    link: '/images-library',
+  },
+  {
     name: 'Tin tức',
     link: '/posts',
   },
   {
     name: 'Liên hệ',
-    link: '#',
+    link: '/contact',
   },
 ];
 
@@ -158,6 +186,36 @@ export const LIST_PROJECT = [
   },
   {
     id: 6,
+    name: 'The Park Home',
+    investor: 'Chị Ngọc',
+    location: 'Long Biên, Hà Nội',
+    square: 168,
+    year: 2022,
+    thumbnail: '/src/assets/images/project_6.jpg',
+    all_image: getImageArrayFromAssets(9),
+  },
+  {
+    id: 7,
+    name: 'The Park Home',
+    investor: 'Chị Ngọc',
+    location: 'Long Biên, Hà Nội',
+    square: 168,
+    year: 2022,
+    thumbnail: '/src/assets/images/project_6.jpg',
+    all_image: getImageArrayFromAssets(9),
+  },
+  {
+    id: 8,
+    name: 'The Park Home',
+    investor: 'Chị Ngọc',
+    location: 'Long Biên, Hà Nội',
+    square: 168,
+    year: 2022,
+    thumbnail: '/src/assets/images/project_6.jpg',
+    all_image: getImageArrayFromAssets(9),
+  },
+  {
+    id: 9,
     name: 'The Park Home',
     investor: 'Chị Ngọc',
     location: 'Long Biên, Hà Nội',

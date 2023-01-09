@@ -1,4 +1,5 @@
 import { Box, Container, Stack } from '@mui/material';
+import { useEffect } from 'react';
 
 import {
   IcRoundSupervisorAccount,
@@ -12,6 +13,13 @@ export const PostDetail = () => {
   const post = LIST_POST[0];
 
   const relatedPosts = LIST_POST.slice(1, 4);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
   return (
     <Container sx={{ mt: 12 }}>
       <Box sx={{ ...centerDiv, mb: 2 }}>

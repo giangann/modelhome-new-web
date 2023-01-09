@@ -9,6 +9,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { LIST_PROJECT } from '../../libs';
@@ -34,6 +35,13 @@ export const ProjectDetail = () => {
   const openFullscreen = (index: number) => {
     document.getElementsByClassName('image')[index]?.requestFullscreen();
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   return (
     <Container sx={{ mt: 12 }}>

@@ -35,7 +35,7 @@ export const Project = () => {
           <Grid item xs={12} sm={4} key={index}>
             <Box
               component="div"
-              onClick={() => navigate(`/projects/${index}`)}
+              onClick={() => navigate(`/projects/${index + 1}`)}
               sx={{
                 position: 'relative',
                 width: '100%',
