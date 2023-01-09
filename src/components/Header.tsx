@@ -1,6 +1,7 @@
 import {
   AppBar,
   Box,
+  Divider,
   Grid,
   Hidden,
   IconButton,
@@ -10,10 +11,10 @@ import {
   Typography,
 } from '@mui/material';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import LogoImage from '../assets/images/logo_modelhome.jpg';
-import { HEADER_ITEMS } from '../libs';
+import { backgroundColor, black, boxShadowHeader, HEADER_ITEMS, white } from '../libs';
 import { CustomDrawer } from './CustomDrawer';
 import { IcSharpSearch, IcTwotoneMenuOpen } from './icons/Icons';
 import { ListInsideDrawer } from './ListInsideDrawer';
@@ -23,27 +24,33 @@ export const Header = () => {
   const onClose = () => {
     setOpenDrawer(false);
   };
+
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   const navigate = useNavigate();
 
   const handleClickHeaderItems = (to: string) => {
     console.log('navigate to: ', to);
     navigate(to);
   };
+
   return (
     <AppBar
       sx={{
-        position: 'relative',
-        backgroundColor: 'white',
-        color: 'black',
+        backgroundColor: isHomePage ? backgroundColor['main'] : black['30'],
+        color: 'white',
         paddingY: { xs: '10px', sm: '18px' },
+        position: 'sticky',
+        boxShadow: isHomePage ? boxShadowHeader : 'none',
       }}
     >
       {/* desktop Header */}
       <Hidden smDown>
-        <Grid container>
+        <Grid container sx={{ position: 'relative' }}>
           <Grid item xs={3}>
             <IconButton
-              sx={{ position: 'absolute', bottom: '-115px', left: '160px', p: 0 }}
+              sx={{ position: 'absolute', bottom: '-130px', left: '160px', p: 0 }}
               onClick={() => navigate('/')}
             >
               <img
@@ -57,7 +64,22 @@ export const Header = () => {
             </IconButton>
           </Grid>
           <Grid item xs={8}>
-            <Stack direction="row" justifyContent="space-around">
+            <Stack
+              direction="row"
+              justifyContent="flex-end"
+              divider={
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  light
+                  variant="fullWidth"
+                  sx={{
+                    borderRightWidth: 'thin',
+                    backgroundColor: white['120'],
+                  }}
+                />
+              }
+            >
               {HEADER_ITEMS.map((item, index) => (
                 <MenuItem key={index} onClick={() => handleClickHeaderItems(item.link)}>
                   <Typography>{item.name}</Typography>

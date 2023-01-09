@@ -8,7 +8,10 @@ export const backgroundColor = {
 };
 
 export const black = {
-  120: '#00000080',
+  50: '#00000080',
+  40: '#00000066',
+  30: '#0000004D',
+  20: '#00000033',
 };
 export const white = {
   120: '#ffffff80',

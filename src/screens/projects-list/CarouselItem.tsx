@@ -42,7 +42,7 @@ export const CarouselItem = (props: CarouselItemProps) => {
           left: 0,
           width: '100%',
           height: 60,
-          backgroundColor: black['120'],
+          backgroundColor: black['50'],
           p: 2,
           boxSizing: 'border-box',
           ...centerDiv,

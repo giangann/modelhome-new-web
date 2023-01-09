@@ -57,7 +57,7 @@ export const Project = () => {
                   bottom: 0,
                   left: 0,
                   width: '100%',
-                  backgroundColor: black['120'],
+                  backgroundColor: black['50'],
                   paddingY: { xs: 1, sm: 2 },
                   height: '15%',
                   ...centerDiv,
