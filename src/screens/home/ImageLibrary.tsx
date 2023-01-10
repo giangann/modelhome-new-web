@@ -16,6 +16,9 @@ export const ImageLibrary = () => {
   for (let i = 0; i < 9; i++) {
     arrImage.push(`${prefixPath}image_library_${i + 1}.jpg`);
   }
+  for (let i = 8; i >= 0; i--) {
+    arrImage.push(`${prefixPath}image_library_${i + 1}.jpg`);
+  }
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
