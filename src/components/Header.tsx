@@ -9,6 +9,8 @@ import {
   Stack,
   styled,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -19,6 +21,8 @@ import { CustomDrawer } from './CustomDrawer';
 import { IcSharpSearch, IcTwotoneMenuOpen } from './icons/Icons';
 import { ListInsideDrawer } from './ListInsideDrawer';
 export const Header = () => {
+  const theme = useTheme();
+  const isSmallerThanMd = useMediaQuery(theme.breakpoints.down('md'));
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const onClose = () => {
@@ -47,15 +51,20 @@ export const Header = () => {
     >
       {/* desktop Header */}
       <Hidden smDown>
-        <Grid container sx={{ position: 'relative' }}>
-          <Grid item xs={3}>
+        <Grid container>
+          <Grid item xs={3} sx={{ position: 'relative' }}>
             <IconButton
-              sx={{ position: 'absolute', bottom: '-130px', left: '160px', p: 0 }}
+              sx={{
+                position: 'absolute',
+                bottom: { sm: '-100px', md: '-130px' },
+                left: { md: '5vh', lg: '160px' },
+                p: 0,
+              }}
               onClick={() => navigate('/')}
             >
               <img
                 style={{
-                  width: 150,
+                  width: isSmallerThanMd ? 80 : 150,
                   height: 'auto',
                 }}
                 alt="logo"
@@ -63,7 +72,7 @@ export const Header = () => {
               />
             </IconButton>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item sm={9} md={8}>
             <Stack
               direction="row"
               justifyContent="flex-end"

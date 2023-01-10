@@ -57,7 +57,7 @@ export const ListProject = () => {
     },
   };
   return (
-    <Container sx={{ mt: 12 }}>
+    <Container className="list-project" sx={{ mt: 12 }}>
       <Box sx={{ ...centerDiv, mb: 2 }}>
         <WhiteTypoStyled variant="h4" sx={{ fontWeight: 600 }}>
           Dự án của chúng tôi

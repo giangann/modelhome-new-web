@@ -1,3 +1,5 @@
+import '../../styles/style.css';
+
 import { Box, Grid } from '@mui/material';
 import { Navigate, useNavigate } from 'react-router-dom';
 
@@ -41,14 +43,18 @@ export const Project = () => {
                 width: '100%',
                 height: '100%',
                 cursor: 'pointer',
+                overflow: 'hidden',
               }}
             >
               <img
+                className="project-image"
                 src={item}
                 alt={`project ${index + 1}`}
                 style={{
                   width: '100%',
                   height: '100%',
+                  objectFit: 'cover',
+                  // transition: 'transform .2s',
                 }}
               />
               <Box

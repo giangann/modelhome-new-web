@@ -1,0 +1,11 @@
+.project-image {
+  transition: transform 0.3s;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+}
+
+.alice-carousel__wrapper li {
+  width: 100% !important;
+}

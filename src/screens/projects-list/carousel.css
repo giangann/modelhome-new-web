@@ -30,10 +30,14 @@
   margin-top: 0;
 }
 /*  */
-.alice-carousel__wrapper li {
+.__active {
+  padding: 0px !important;
+}
+.list-project .alice-carousel__wrapper li {
   width: fit-content !important;
   padding: 10px !important    ;
 }
+
 .alice-carousel__prev-btn,
 .alice-carousel__next-btn {
   padding: 0px !important;
