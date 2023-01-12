@@ -1,17 +1,19 @@
 import { Box, Container, Stack } from '@mui/material';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   IcRoundSupervisorAccount,
   IcSharpCalendarMonth,
 } from '../../components/icons/Icons';
 import { LIST_POST } from '../../libs';
-import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
+import { centerDiv, CustomButton, responsiveText, WhiteTypoStyled } from '../../styles';
 import { PostItem } from './PostItem';
 
 export const PostDetail = () => {
-  const post = LIST_POST[0];
+  const navigate = useNavigate();
 
+  const post = LIST_POST[0];
   const relatedPosts = LIST_POST.slice(1, 4);
 
   useEffect(() => {
@@ -47,13 +49,21 @@ export const PostDetail = () => {
         </WhiteTypoStyled>
       </Box>
 
-      <Box sx={{ ...centerDiv, my: 2 }}>
+      <Box sx={{ ...centerDiv, justifyContent: 'start', mt: 1}}>
+        <CustomButton onClick={() => navigate('/posts')}>
+          <WhiteTypoStyled sx={{ ...responsiveText }}>
+            &lt;&lt; danh sách bài viết
+          </WhiteTypoStyled>
+        </CustomButton>
+      </Box>
+
+      <Box sx={{ ...centerDiv, my: 3 }}>
         <WhiteTypoStyled variant="h4" sx={{ fontWeight: 600 }}>
           Bài viết liên quan
         </WhiteTypoStyled>
       </Box>
       <Box>
-        <Stack direction="row" spacing={2}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
           {relatedPosts.map((item: any, index: any) => (
             <PostItem key={index} {...item} isMobile={true} />
           ))}

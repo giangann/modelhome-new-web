@@ -6,6 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import { SeeMoreButton } from '../../components/button';
 
 import { centerDiv, WhiteTypoStyled } from '../../styles';
 
@@ -39,6 +40,7 @@ export const ImageLibrary = () => {
           </ImageListItem>
         ))}
       </ImageList>
+      <SeeMoreButton navigateTo="/images-library" />
     </Box>
   );
 };

@@ -8,6 +8,7 @@ import AliceCarousel from 'react-alice-carousel';
 import { LIST_PROJECT } from '../../libs';
 import { centerDiv, WhiteTypoStyled } from '../../styles';
 import { CarouselItem } from './CarouselItem';
+import { useEffect } from 'react';
 
 export const ListProject = () => {
   const theme = useTheme();
@@ -56,6 +57,10 @@ export const ListProject = () => {
       items: 3,
     },
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <Container className="list-project" sx={{ mt: 12 }}>
       <Box sx={{ ...centerDiv, mb: 2 }}>

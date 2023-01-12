@@ -1,10 +1,11 @@
 import '../../styles/style.css';
 
-import { Box, Grid } from '@mui/material';
+import { Box, Button, Grid, MenuItem } from '@mui/material';
 import { Navigate, useNavigate } from 'react-router-dom';
 
 import { black } from '../../libs';
-import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
+import { centerDiv, CustomButton, responsiveText, WhiteTypoStyled } from '../../styles';
+import { SeeMoreButton } from '../../components/button';
 
 // const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
@@ -89,6 +90,9 @@ export const Project = () => {
           </Grid>
         ))}
       </Grid>
+
+      {/* see more */}
+      <SeeMoreButton navigateTo="/projects" />
     </Box>
   );
 };

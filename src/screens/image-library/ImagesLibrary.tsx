@@ -1,5 +1,6 @@
 import { Box, ImageList, ImageListItem, useMediaQuery, useTheme } from '@mui/material';
 import { Container } from '@mui/system';
+import { useEffect } from 'react';
 
 import { ALL_IMAGE } from '../../libs';
 import { centerDiv, WhiteTypoStyled } from '../../styles';
@@ -8,6 +9,9 @@ export const ImagesLibrary = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <Container sx={{ mt: 12 }}>
       <Box sx={{ ...centerDiv, mb: 2 }}>

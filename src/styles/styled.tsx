@@ -1,4 +1,5 @@
-import { styled, Typography } from '@mui/material';
+import { MenuItem, styled, Typography } from '@mui/material';
+import { black } from '../libs';
 
 // styled component
 export const ContentTypoResponsive = styled(Typography)(({ theme }) => ({
@@ -10,6 +11,18 @@ export const ContentTypoResponsive = styled(Typography)(({ theme }) => ({
 export const WhiteTypoStyled = styled(Typography)({
   color: 'white',
 });
+
+export const CustomButton = styled(MenuItem)(({ theme }) => ({
+  backgroundColor: `${black['20']} !important`,
+
+  paddingLeft: theme.spacing(1.25),
+  paddingRight: theme.spacing(1.25),
+  paddingTop: theme.spacing(0.75),
+  paddingBottom: theme.spacing(0.75),
+
+  minHeight: 'unset',
+  borderRadius: '8px',
+}));
 
 // styles css propertises
 export const whiteTypo = {

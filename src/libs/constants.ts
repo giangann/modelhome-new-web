@@ -41,22 +41,26 @@ export const generateRandomArrayImage = (length: number) => {
 
 export const ALL_IMAGE = generateRandomArrayImage(50);
 export const HEADER_ITEMS = [
+  // {
+  //   name: 'Về chúng tôi',
+  //   link: '#',
+  // },
   {
-    name: 'Về chúng tôi',
-    link: '#',
+    name: 'Trang chủ',
+    link: '/',
   },
   {
     name: 'Các dự án',
     link: '/projects',
   },
-  {
-    name: 'Kiến trúc',
-    link: '#',
-  },
-  {
-    name: 'Nội thất',
-    link: '#',
-  },
+  // {
+  //   name: 'Kiến trúc',
+  //   link: '#',
+  // },
+  // {
+  //   name: 'Nội thất',
+  //   link: '#',
+  // },
   {
     name: 'Thư viện ảnh',
     link: '/images-library',

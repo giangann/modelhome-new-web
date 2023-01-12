@@ -1,9 +1,27 @@
 import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 
-import { IcTwotoneLocationOn } from '../../components/icons/Icons';
+import {
+  IcRoundPhoneInTalk,
+  IcTwotoneLocationOn,
+  MaterialSymbolsMarkEmailUnreadRounded,
+} from '../../components/icons/Icons';
 import { centerDiv, responsiveText, WhiteTypoStyled } from '../../styles';
 
 export const Contact = () => {
+  const contactObject = {
+    address: {
+      icon: <IcTwotoneLocationOn fontSize={24} color="white" />,
+      text: 'Chung cư IMPERIA GARDEN số 203 Nguyễn Huy Tưởng, Phường Thanh Xuân Trung, Quận Thanh Xuân, Hà Nội',
+    },
+    hotline: {
+      icon: <IcRoundPhoneInTalk fontSize={24} color="white" />,
+      text: '0987884995',
+    },
+    email: {
+      icon: <MaterialSymbolsMarkEmailUnreadRounded fontSize={24} color="white" />,
+      text: 'dangbinhkts@gmail.com',
+    },
+  };
   return (
     <Container sx={{ mt: 12 }}>
       <Grid container sx={{ mb: 2 }}>
