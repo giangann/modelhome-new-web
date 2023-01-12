@@ -41,6 +41,21 @@ export const Footer = () => {
       title: 'Tiếp nhận phản hồi',
     },
   };
+
+  const socialMedia = [
+    {
+      icon: <IconParkTiktok fontSize={22} />,
+      link: 'https://www.facebook.com/modelhome.vn',
+    },
+    {
+      icon: <PhFacebookLogoDuotone fontSize={24} color="wheat" />,
+      link: 'https://www.facebook.com/modelhome.vn',
+    },
+    {
+      icon: <OpenmojiYoutube fontSize={30} />,
+      link: 'https://www.facebook.com/modelhome.vn',
+    },
+  ];
   return (
     <Container sx={{ mt: 12 }}>
       <Grid container spacing={4}>
@@ -92,15 +107,11 @@ export const Footer = () => {
               </Stack>
             </Stack>
             <Stack direction="row" justifyContent="flex-start" sx={{ ml: '-8px' }}>
-              <IconButton>
-                <IconParkTiktok fontSize={22} />
-              </IconButton>
-              <IconButton>
-                <PhFacebookLogoDuotone fontSize={24} color="wheat" />
-              </IconButton>
-              <IconButton>
-                <OpenmojiYoutube fontSize={30} />
-              </IconButton>
+              {socialMedia.map((item: any, index: any) => (
+                <IconButton key={index} onClick={() => window.open(item.link, '_blank')}>
+                  {item.icon}
+                </IconButton>
+              ))}
             </Stack>
           </Box>
         </Grid>

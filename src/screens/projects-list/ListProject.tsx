@@ -22,15 +22,6 @@ export const ListProject = () => {
   const houseFurniture = arrImage.slice(0, arrImage.length / 2);
   const officeDesign = arrImage.slice(arrImage.length / 2, arrImage.length - 1);
 
-  console.log('house furniture', houseFurniture);
-  // const houseFurnitureCarousel = houseFurniture.map((item: any, index: any) => (
-  //   <CarouselItem imageLink={item} key={index} />
-  // ));
-
-  // const officeDesignCarousel = officeDesign.map((item: any, index: any) => (
-  //   <CarouselItem imageLink={item} key={index} />
-  // ));
-
   const houseFurnitureCarousel = LIST_PROJECT.map((item: any, index: any) => (
     <CarouselItem
       projectName={item.name}
