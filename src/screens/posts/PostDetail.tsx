@@ -49,7 +49,7 @@ export const PostDetail = () => {
         </WhiteTypoStyled>
       </Box>
 
-      <Box sx={{ ...centerDiv, justifyContent: 'start', mt: 1}}>
+      <Box sx={{ ...centerDiv, justifyContent: 'start', mt: 1 }}>
         <CustomButton onClick={() => navigate('/posts')}>
           <WhiteTypoStyled sx={{ ...responsiveText }}>
             &lt;&lt; danh sách bài viết

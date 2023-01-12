@@ -3,9 +3,9 @@ import '../../styles/style.css';
 import { Box, Button, Grid, MenuItem } from '@mui/material';
 import { Navigate, useNavigate } from 'react-router-dom';
 
+import { SeeMoreButton } from '../../components/button';
 import { black } from '../../libs';
 import { centerDiv, CustomButton, responsiveText, WhiteTypoStyled } from '../../styles';
-import { SeeMoreButton } from '../../components/button';
 
 // const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 

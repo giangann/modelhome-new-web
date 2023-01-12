@@ -18,7 +18,7 @@ export const About = () => {
         spacing={{ xs: 2 }}
         justifyContent={{ xs: 'unset', sm: 'space-between' }}
       >
-        <Grid item xs={12} sm={8} sx={{...centerDiv}}>
+        <Grid item xs={12} sm={8} sx={{ ...centerDiv }}>
           <Box>
             <Box sx={{ mb: 1 }}>
               <WhiteTypoStyled variant="h5">{about.title} </WhiteTypoStyled>

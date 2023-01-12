@@ -3,12 +3,12 @@ import './carousel.css';
 
 import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { Container } from '@mui/system';
+import { useEffect } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 
 import { LIST_PROJECT } from '../../libs';
 import { centerDiv, WhiteTypoStyled } from '../../styles';
 import { CarouselItem } from './CarouselItem';
-import { useEffect } from 'react';
 
 export const ListProject = () => {
   const theme = useTheme();
