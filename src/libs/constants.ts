@@ -53,10 +53,23 @@ export const HEADER_ITEMS = [
     name: 'Các dự án',
     link: '/projects',
   },
-  // {
-  //   name: 'Kiến trúc',
-  //   link: '#',
-  // },
+  {
+    name: 'Thiết kế nội thất',
+    link: '#',
+  },
+  {
+    name: 'Thi công nội thất',
+    link: '#',
+  },
+  {
+    name: 'Thiết kế công trình',
+    link: '#',
+  },
+  {
+    name: 'Thi công công trình',
+    link: '#',
+  },
+
   // {
   //   name: 'Nội thất',
   //   link: '#',

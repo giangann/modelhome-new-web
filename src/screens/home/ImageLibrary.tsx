@@ -7,6 +7,9 @@ import {
   useTheme,
 } from '@mui/material';
 
+import Image1 from '../../assets/images/image_library_1.jpg';
+import Image2 from '../../assets/images/image_library_2.jpg';
+import Image3 from '../../assets/images/image_library_3.jpg';
 import { SeeMoreButton } from '../../components/button';
 import { centerDiv, WhiteTypoStyled } from '../../styles';
 
@@ -21,6 +24,13 @@ export const ImageLibrary = () => {
     arrImage.push(`${prefixPath}image_library_${i + 1}.jpg`);
   }
 
+  //
+  const arrImageUpdate = [];
+  for (let i = 0; i < 9; i++) {
+    arrImageUpdate.push(`${prefixPath}image_library_${i + 1}.jpg`);
+  }
+
+  //
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (

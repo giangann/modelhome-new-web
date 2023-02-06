@@ -8,6 +8,7 @@ import ImageSlide02 from '../../assets/images/slide_02.jpg';
 import { getImageArrayFromAssets } from '../../libs';
 import { About } from './About';
 import { ImageLibrary } from './ImageLibrary';
+import { OurServices } from './OurServices';
 import { Project } from './Project';
 import { SlideCarouselItem } from './SlideCarouselItem';
 export const Home = () => {
@@ -47,6 +48,7 @@ export const Home = () => {
         />
       </Box>
       <About />
+      <OurServices />
       <Project />
       <ImageLibrary />
     </Box>
